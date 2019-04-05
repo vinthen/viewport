@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Viewport size</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <div id="main">
+        <div class="header"></div>
+        <div class="content">
+
+            <section>
+                <h2>Getting width and height of an element</h2>
+                <p><i>const box = document.querySelector('.box');</i></p>
+                <p>width and height in pixels, including padding and border.</p>
+                <p class="code">const width = box.offsetWidth;</p>
+                <p class="code">const height = box.offsetHeight;</p>
+                <hr>
+                <p>width and height in pixels, including padding, but without border</p>
+                <p class="code">const width = box.clientWidth;</p>
+                <p class="code">const height = box.clientHeight;</p>
+            </section>
+
+            <section>
+                <h2>window width and height</h2>
+                <p>Getting the window width and height is done differently. Just like in jQuery, the above presented methods do not work on the window or document object. Use this instead:</p>
+                <p class="code">const ww = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;</p>
+                <p class="code">const wh = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;</p>
+
+                <a class="ext" href="https://plainjs.com/javascript/styles/getting-width-and-height-of-an-element-23/" target="_blank">planeJS ref.</a>
+            </section>   
+            
+        </div>
+    </div>
+    
+
+    <script src="js/index.js"></script>
+</body>
+</html>
